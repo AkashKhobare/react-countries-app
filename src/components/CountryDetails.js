@@ -4,14 +4,6 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useParams, useRoutes } from "react-router-dom";
 import { client } from "../CountriesApp";
 
-// const COUNTRY_DETAILS = gql`
-//     countries(where: { name: { _eq: $name} }) {
-//         name
-//         code
-//         emoji
-//     }
-// `;
-
 const COUNTRY_DETAILS= gql`
     query fetchCountryDetails($code: ID!) {
         country(code: $code) {
